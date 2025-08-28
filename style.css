@@ -1,0 +1,271 @@
+/* CSS files add styling rules to your content */
+
+body {
+  margin: 0;
+  font-family: "Garamond";
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #262626;
+}
+
+.msg-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+}
+
+h1 {
+  font-family: "Verdana";
+  font-style: bold;
+  color: #a57562;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Tahoma";
+  text-align: center;
+  color: #36ca7f;
+}
+
+h4 {
+  font-family: "Verdana";
+  text-align: center;
+  color: #a3a5aa;
+}
+
+h4 {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.img-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  background-color: #303030;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.msg-wrapper,
+.btn-wrapper {
+  width: 300px;
+}
+
+.btn-wrapper {
+  perspective: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+}
+.pronouns-btn {
+  background-color: #ff7698;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pronouns-btn:hover {
+  transform: translateZ(40px);
+}
+
+.youtube-btn {
+  background-color: #fe2954;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.youtube-btn:hover {
+  transform: translateZ(40px);
+}
+
+.reddit-btn {
+  background-color: #ff7f50;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reddit-btn:hover {
+  transform: translateZ(40px);
+}
+
+.bsky-btn {
+  background-color: #008b8b;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bsky-btn:hover {
+  transform: translateZ(40px);
+}
+
+.twitch-btn {
+  background-color: #772ce8;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.twitch-btn:hover {
+  transform: translateZ(40px);
+}
+
+.instagram-btn:hover {
+  transform: translateZ(40px);
+}
+
+.instagram-btn {
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1);
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mixcloud-btn {
+  background-color: #082c95;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mixcloud-btn:hover {
+  transform: translateZ(40px);
+}
+
+.tumblr-btn {
+  background-color: #34526f;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tumblr-btn:hover {
+  transform: translateZ(40px);
+}
+
+.soundcloud-btn {
+  background-color: #ff9233;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.soundcloud-btn:hover {
+  transform: translateZ(40px);
+}
+
+.pin-btn {
+  background-color: #bd081c;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pin-btn:hover {
+  transform: translateZ(40px);
+}
+.vrchat-btn {
+  background-color: #a3be8c;
+  font-family: "comic sans ms";
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.vrchat-btn:hover {
+  transform: translateZ(40px);
+}
+
+a {
+  margin: 10px;
+  min-width: 100px;
+  text-align: center;
+}

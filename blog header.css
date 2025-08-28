@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: "Verdana";
+  background-color: #f4f4f4;
+  font-style: bold;
+}
+
+header {
+  background-color: #333;
+  padding: 1rem 0;
+}
+
+.main-nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {}
+
+.nav-link {
+  color: #36ca7f;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a57562;
+}
