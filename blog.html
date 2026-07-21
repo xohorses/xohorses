@@ -1,22 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clickable Header</title>
-    <link rel="stylesheet" href="/blog header.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-        </ul>
-      </nav>
-<h1>
-  coming soon
-      </h1>
-    </header>
-  </body>
-</html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="icon" type="image/png" href="https://xohorses.moe/my-favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="https://xohorses.moe/my-favicon/favicon.svg">
+  <link rel="shortcut icon" href="https://xohorses.moe/my-favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://xohorses.moe/my-favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="xohorses">
+  <link rel="manifest" href="https://xohorses.moe/my-favicon/site.webmanifest">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>xohorses</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #262626;
+    }
+
+    .xoicon {
+      display: block;
+      margin: 2rem auto 0;
+      width: 320px;
+      height: 320px;
+    }
+
+    .side-layout {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 3rem;
+      width: 100%;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .msg-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+    }
+
+    h1 {
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      font-weight: bold;
+      color: #a57562;
+      text-align: left;
+      margin: 0 0 0.25rem;
+    }
+
+    h2 {
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      text-align: left;
+      color: #36ca7f;
+      margin: 0 0 0.5rem;
+    }
+
+    h4 {
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      text-align: left;
+      color: #a3a5aa;
+      font-weight: normal;
+      margin: 0.5rem 0;
+    }
+
+    a:link    { text-decoration: none; color: white; }
+    a:visited { text-decoration: none; color: white; }
+    a:hover   { text-decoration: none; color: white; }
+    a:active  { text-decoration: none; color: white; }
+
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #303030;
+      align-self: stretch;
+      padding: 0 2rem;
+      box-sizing: border-box;
+    }
+
+    .img-wrapper img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+
+    .btn-wrapper {
+      perspective: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      align-self: flex-start;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .btn-wrapper a {
+      margin: 6px 0;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .pronouns-btn {
+      background-color: #0f611d;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .pronouns-btn:hover { transform: translateZ(40px); }
+
+    .bsky-btn {
+      background-color: #008b8b;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: white; text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .bsky-btn:hover { transform: translateZ(40px); }
+
+    .tumblr-btn {
+      background-color: #34526f;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: white; text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .tumblr-btn:hover { transform: translateZ(40px); }
+
+    .vrchat-btn {
+      background-color: #000000;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: white; text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .vrchat-btn:hover { transform: translateZ(40px); }
+
+    .youtube-btn {
+      background-color: #fe2954;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .youtube-btn:hover { transform: translateZ(40px); }
+
+    .twitch-btn {
+      background-color: #772ce8;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .twitch-btn:hover { transform: translateZ(40px); }
+
+    .soundcloud-btn {
+      background-color: #ff9233;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .soundcloud-btn:hover { transform: translateZ(40px); }
+
+    .mixcloud-btn {
+      background-color: #082c95;
+      font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+      border-radius: 10px; padding: 10px;
+      color: white; text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .mixcloud-btn:hover { transform: translateZ(40px); }
+  </style>
+</head>
+<body cz-shortcut-listen="true">
+
+  <svg class="xoicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <defs>
+      <style>
+        .st0 { fill: #f6f1ef; }
+        .st1 { fill: #6a9582; }
+        .st2 { fill: #a57562; }
+      </style>
+    </defs>
+    <path class="st0" d="M1004.18,620.16l-.6-39.78c-.34-24.08-8.21-45.61-21.37-62.3v-1.74l-.1-1.83-1.2-21.06-.1-1.76-.2-1.75c-1.09-9.74-4.01-18.75-8.39-26.7l.05-1.25c11.28-12.49,18.07-29.19,18.07-47.77v-2.12l-.04-1.12-1.51-43.46-.03-.81-.05-.81c-2.31-38.5-32.77-67.52-70.87-67.52h-.88l-.88.02-207.48,5.68c-30.36.87-55.85,16.76-70.29,40.88-35.5-34.07-82.06-52.49-134.24-52.49-54.87,0-104.1,19.38-140.59,52.71l-.12-.1-48.55-39.48c-12.8-10.47-28.88-16.23-45.36-16.23-24.54,0-47.11,12.37-60.38,33.08l-.28.43-.27.44c-1.2,1.94-2.57,4.12-4.09,6.51l-6.16-7.39c-13.76-17.1-34.69-27.23-56.48-27.23-16.46,0-32.61,5.89-45.49,16.59l-.29.24-.29.24-50.51,43-1.01.86-.97.9c-14.9,13.78-23.45,33.51-23.45,54.12,0,17.25,5.94,33.64,16.78,46.39l43.99,52.85c-11.09,15.68-22.14,30.72-31.32,43.21-3.9,5.3-7.48,10.17-10.61,14.49-9.78,12.56-15.12,28.11-15.12,44.31,0,19.99,8.66,39.47,23.76,53.43l1.78,1.64,1.89,1.5,44.38,35.24c12.46,10.02,28.15,15.53,44.3,15.53,20.11,0,38.75-8.03,52.74-22.68,5.83-5.85,14.03-14.52,23.34-24.86l14.65,17.59c13.6,16.86,34.4,26.85,56.14,26.85,17.16,0,33.67-6.12,46.59-17.27l33.64-28.63c34.04,29.85,78.08,47.62,126.8,47.62,38.82,0,78.67-12.44,113.16-34.86,5.87,8.22,13.36,15.28,22.28,20.49l29,17.36c9.03,5.78,22.53,11.57,40.34,11.57,8.26,0,16.3-1.38,23.89-3.99,3.8.65,7.69.98,11.65.98,7.96,0,15.58-1.28,22.77-3.81l17.47-5.33c4.63.95,9.41,1.44,14.26,1.44,12.48,0,24.66-3.29,35.3-9.42,5.1,3.07,10.67,5.56,16.62,7.35l1.85.56,1.88.44,44.94,10.64c7.63,1.85,15.43,2.79,23.2,2.79,32.02,0,60.32-17.87,73.87-46.62l1.13-2.38c7.2-15.12,17.05-35.84,17.05-63.49v-1.98Z"></path>
+    <path class="st1" d="M291.16,650.61c-1.55,1.38-3.09,1.72-4.64,1.72-2.17,0-4.65-1.03-6.2-3.09l-64.76-77.75c-22.62,30.62-54.23,65.71-69.41,80.84-1.86,2.07-4.03,3.1-6.51,3.1-1.24,0-2.79-.34-4.03-1.38l-44.62-35.44c-1.86-1.72-3.1-4.13-3.1-6.19s.62-3.78,1.86-5.16c16.73-23.05,47.41-63.64,71.27-100.8l-75.3-90.48c-1.24-1.38-1.55-3.09-1.55-4.82,0-2.41.93-5.16,2.79-6.88l50.51-43c1.24-1.03,2.79-1.72,4.34-1.72,2.48,0,4.96,1.38,6.51,3.44l61.35,73.62c22.31-31.3,42.76-61.92,53.61-79.47,1.54-2.41,3.71-3.44,6.19-3.44,1.55,0,3.41.68,4.65,1.72l48.65,39.57c2.48,2.06,4.03,5.5,4.03,8.95,0,8.25-17.05,43-59.49,101.48l75.6,90.82c1.24,1.38,1.55,3.1,1.55,4.82,0,2.41-.93,4.82-2.79,6.54l-50.51,43Z"></path>
+    <path class="st1" d="M493.54,654.05c-70.65,0-132.63-57.8-132.63-143.46,0-18.92,3.1-39.22,9.61-60.55,20.14-64.33,79.02-93.23,133.56-93.23,99.16,0,136.34,90.82,136.34,148.28,0,94.6-83.98,148.96-146.88,148.96ZM562.33,504.75c0-31.65-14.25-73.97-59.49-73.97-34.4,0-60.42,28.9-60.42,73.97s30.05,73.27,61.67,73.27c33.46,0,58.25-30.96,58.25-73.27Z"></path>
+    <path class="st2" d="M735.66,665.26c-.6.34-1.2.34-1.8.34-3.32,0-5.42-2.67-6.33-6.69l-5.42-24.07-14.15,27.08c-2.41,4.68-6.03,6.69-9.64,6.69-2.11,0-4.22-.34-6.03-1.68l-30.71-18.39c-3.02-1.67-4.52-5.35-4.52-8.69,0-2.34.6-4.34,1.81-6.35l21.68-33.77c1.8-3.01,3.91-4.01,6.32-4.01,1.51,0,3.02.34,4.52,1.33l30.72,19.39c1.2.67,2.11,1.67,2.71,2.67.3,0,.3-.34.6-.34l25-7.02c.6-.34,1.2-.34,1.8-.34,2.71,0,5.43,1.67,6.63,5.35l9.34,28.08c.6,1.68.6,3.01.6,4.02,0,4.34-2.41,7.02-5.72,8.02l-27.41,8.36ZM858.83,658.57c-3.32-1-4.82-3.01-4.82-5.68,0-1.33.3-3.01,1.2-4.68,6.93-12.37,12.35-22.39,12.35-28.75l-.3-18.05c0-7.02-1.81-11.03-7.83-11.03h-.6l-131.6,7.02h-2.41c-18.07,0-34.33-10.36-34.33-38.78l-.6-166.49c0-15.38,8.73-23.4,20.47-23.73l207.48-5.68c3.92,0,6.33,2,6.63,7.02l1.51,43.46v1.01c0,4.01-1.81,6.35-6.03,6.35l-64.45,1.68-.6,26.07,49.08,1.01c3.32,0,4.22,1.33,4.22,4.34l-.9,20.73c0,2.67-1.21,4.34-3.62,4.34h-.6l-49.08-1-.3,18.72,58.42-3.68h.9c2.41,0,3.32,1.68,3.62,4.35l1.2,21.06v.67c0,2.34-1.5,3.34-3.92,3.67l-61.13,4.34-.6,22.74,53.6-2.67h2.11c18.37,0,31.02,13.04,31.32,34.43l.6,39.78v1.01c0,14.04-5.72,25.08-12.05,38.44-3.31,7.02-9.04,9.7-15.66,9.7-2.71,0-5.42-.34-8.14-1.01l-45.17-10.7ZM798.9,423.56l-40.95,1.01v21.73l40.35.66.61-23.4ZM797.7,476.38l-39.75-1v27.41l39.15-2.68.6-23.73ZM796.49,530.54l-38.55,2.67v14.04c0,5.01,1.8,6.68,5.12,6.68l33.13-1.67.3-21.73ZM792.28,656.57c-1.2,1.01-2.71,1.34-3.92,1.34-2.1,0-4.21-1.01-5.42-3.34l-12.35-22.4c-.6-1.33-.9-2.34-.9-3.68,0-2.67,1.2-5.35,3.31-6.35l18.37-11.03c1.2-.67,2.41-1.33,3.61-1.33,1.51,0,2.71,1,4.22,3l13.25,18.39c1.21,1.67,1.81,3.67,1.81,5.35,0,2.67-1.51,5.01-3.61,6.68l-18.37,13.37ZM835.94,647.54c-1.2.67-2.41,1.01-3.61,1.01-2.11,0-3.62-1.01-4.82-3.01l-10.84-20.39c-.6-1.01-.9-2.34-.9-3.34,0-1.67,1.2-3.34,2.71-4.34l18.06-10.7c.61-.34,1.51-.67,2.41-.67,1.81,0,3.62,1,4.52,2.67l11.44,16.05c1.2,1.67,1.51,3.34,1.51,4.68,0,3.01-1.51,5.68-3.62,7.02l-16.86,11.03Z"></path>
+  </svg>
+
+  <div class="side-layout">
+    <div class="msg-wrapper">
+      <h1>howdy!</h1>
+      <h2>he/they preferred</h2>
+      <header>
+        <nav>
+          <a href="https://xohorses.moe/horsie.html">blog</a>
+        </nav>
+      </header>
+      <h4>
+        - vocaloid enthusiast <br>
+        - virtual reality is awesome<br>
+        - anime is fun<br>
+        - 🍰 Adult <br>
+        - taken by 4Bakers ♡
+      </h4>
+    </div>
+
+    <div class="btn-wrapper">
+      <a class="pronouns-btn" target="_blank" href="https://en.pronouns.page/@xohorses">pronouns</a>
+      <a class="bsky-btn" target="_blank" href="https://bsky.app/profile/xohorses.moe">bsky</a>
+      <a class="tumblr-btn" target="_blank" href="https://www.tumblr.com/xohorses">tumblr</a>
+      <a class="vrchat-btn" target="_blank" href="https://vrchat.com/home/user/usr_f2465867-2490-4ced-a4ea-f8df31913844">vrchat</a>
+      <a class="youtube-btn" target="_blank" href="https://www.youtube.com/channel/UCbiNUn6qXH-IdNMh16aYmlg">youtube</a>
+      <a class="twitch-btn" target="_blank" href="https://www.twitch.tv/xohorses">twitch</a>
+      <a class="soundcloud-btn" target="_blank" href="https://soundcloud.com/xohorses">soundcloud</a>
+      <a class="mixcloud-btn" target="_blank" href="https://www.mixcloud.com/xohorses/">mixcloud</a>
+    </div>
+  </div>
+
+
+
+
+</body></html>
