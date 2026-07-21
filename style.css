@@ -269,3 +269,174 @@ a {
   min-width: 100px;
   text-align: center;
 }
+body {
+  margin: 0;
+  font-family: "Verdana";
+  background-color: #f4f4f4;
+  font-style: bold;
+}
+
+header {
+  background-color: #333;
+  padding: 6rem 0;
+}
+#titlebox {
+  color: #4f3d46; /* black text */
+}
+.main-nav {
+text-align: left;
+display: inline-block;
+padding: 2rem;
+}
+
+.nav-list {
+  display: inline-block; /* makes the ul shrink to its content */
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-link {
+  color: #36ca7f;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a57562;
+}
+
+body {
+    background-color: #333;
+    font-size: 22;
+    font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', monospace;
+    padding: 0;
+    margin: 0;
+
+    }
+    
+  .wrapper {
+    background: none;
+    top: 0;
+    margin: 0 auto;
+    width: 870px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+
+  .wrapper-2 {
+    position: relative;
+    }
+
+  .main, .sidebar-right {
+    display: inline-block;
+    }
+
+  .sidebar-left, .sidebar-right {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    }
+
+  .sidebar-left, .sidebar-right {
+    width: 175px;
+    }
+    
+  .main {
+    width: 600px;
+    margin-left: 165px;
+    }
+    
+  .sidebar-left {
+    margin-left: 0px;
+    }
+
+  .sidebar-right {
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .bottom {
+    margin-top: 320px;
+    /*width: calc(100% - 185px);*/
+    }
+
+  .wrapper {
+    color: #4f3d46;
+    }
+    
+  .box {
+    border: 3px double #333;
+    background: #fff;
+    padding: 0;
+    margin: 10px 0px 15px 0px;
+    }
+
+
+  .title { /*suppress title, since we're putting the title as text in the header box*/
+    display: none;
+    }
+  
+  .footer {
+    height: 0;
+    }
+    
+  .box h1, .box h2, .box h3, .box h4 {
+    background: #a57562;
+    margin: 0;
+    padding: 0.35em 0.25em 0.3em 0.25em;
+    text-align: center;
+    border-bottom: 3px double #333;
+    }
+    
+  .inner {
+    padding: 0.25em 1em 0.3em 1em;
+    font-size: .95em;
+    }
+
+
+  /* For narrow screens: slightly narrows sidebars, and makes the width
+   * of the main/center div flexible (sized relative to viewport width.)
+   */
+  @media(max-width:880px) {
+    .wrapper {
+      width: calc(340px + 50vw);
+      }
+    .sidebar-left, .sidebar-right {
+      width: 160px;
+      }
+    .main {
+      width: 50vw;
+      margin-left: 170px;
+      }
+    }
+  
+@media(orientation:portrait) {
+    .wrapper {
+      width: 96vw;
+      margin: 0 auto;
+      padding:0;
+      position: relative;
+      }
+    .wrapper-2 {
+      width: 94vw;
+      margin: 0 auto;
+      padding:0;
+      position: relative;
+      }
+    .sidebar-left, .main, .sidebar-right {
+      position: relative;
+      width: 92vw;
+      margin: 0.25rem 1vw;
+      }
+    } 
